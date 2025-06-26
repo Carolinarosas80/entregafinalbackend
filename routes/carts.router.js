@@ -1,7 +1,7 @@
-i// routes/cartsRouter.js
+// routes/cartsRouter.js
 import express from 'express';
-import Cart from '../models/Cart.js';
-import Product from '../models/Product.js';
+import Cart from '../dao/models/cart.model.js';
+import Product from '../dao/models/product.model.js';
 
 const router = express.Router();
 

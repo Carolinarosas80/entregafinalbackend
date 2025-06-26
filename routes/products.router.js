@@ -1,7 +1,6 @@
 // routes/productsRouter.js
 import express from 'express';
-import Product from '../models/Product.js';
-
+import Product from '../dao/models/product.model.js'
 const router = express.Router();
 
 // Obtener todos los productos
@@ -35,7 +34,7 @@ router.get('/:pid', async (req, res) => {
     res.status(400).json({ error: 'ID inválido' });
   }
 });
-const result = await ProductModel.paginate({}, {
+ export const paginate = await Product.paginate({}, {
   page: 1,
   limit: 10,
   sort: { price: -1 }
